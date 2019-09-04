@@ -4,7 +4,7 @@ sgMail.setApiKey(process.env.SENDGRID_APIKEY);
 const Emailer = (email, subject, message) => {
   const msg = {
     to: email,
-    from: process.env.SENDER,
+    from: process.env.EMAIL_SENDER,
     subject: subject,
     text: message,
     html: html
