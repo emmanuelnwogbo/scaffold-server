@@ -1,0 +1,36 @@
+{
+  "name": "scaffold-server",
+  "version": "1.0.0",
+  "description": "backend server with and microservice api capabilities",
+  "main": "index.js",
+  "scripts": {
+    "start": "node dist/index",
+    "dev": "nodemon --exec babel-node server/index",
+    "build": "babel ./server --out-dir dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emmanuelnwogbo/scaffold-server.git"
+  },
+  "author": "Emmanuel <nerdyemmanuel@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/emmanuelnwogbo/scaffold-server/issues"
+  },
+  "homepage": "https://github.com/emmanuelnwogbo/scaffold-server#readme",
+  "dependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/node": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@sendgrid/mail": "^6.4.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.1.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "nodemon": "^1.19.2",
+    "validator": "^11.1.0"
+  }
+}
