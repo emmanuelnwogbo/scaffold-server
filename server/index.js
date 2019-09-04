@@ -1,10 +1,25 @@
+require('dotenv').config()
+
 import express from 'express';
 import bodyParser from 'body-parser';
+const { mongoose } = require('./db/mongoose');
 import cors from 'cors';
 
-const PORT = process.env.PORT || 3030;
+import AuthRoute from './routes/Auth';
 
+const { SignUp, SignIn } = AuthRoute;
+
+const PORT = process.env.PORT || 3030;
 const app = express();
+
+SignUp(app);
+SignIn(app);
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ 
+  extended: false
+}));
+app.use(cors());
 
 app.listen(PORT, error => {
   if (error) {
